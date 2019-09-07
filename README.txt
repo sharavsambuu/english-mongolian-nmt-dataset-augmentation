@@ -6,4 +6,8 @@
   Python library for google translation, textblob
   https://textblob.readthedocs.io/en/dev/
 
+# Steps
+
+  python3 datasets/dl_and_preprop_mn_news.py
+
   
