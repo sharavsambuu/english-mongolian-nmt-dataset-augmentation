@@ -124,3 +124,5 @@ dmypy.json
 .pyre/
 
 mn_news_700m.rar
+mn_corpus/
+tmp_mn_news_700m/
