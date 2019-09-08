@@ -128,3 +128,5 @@ mn_corpus/
 tmp_mn_news_700m/
 sentences.txt
 filtered_sentences.txt
+
+translate-shell/

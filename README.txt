@@ -10,5 +10,6 @@
 
   python3 datasets/dl_and_preprop_mn_news.py
   ./generate_sentences.sh && ./criterion_sentences.sh
+  ./install_translate.sh
 
   
