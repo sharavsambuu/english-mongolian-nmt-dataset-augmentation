@@ -12,6 +12,7 @@
   ./generate_sentences.sh && ./criterion_sentences.sh && ./prepare_translation.sh
   ./install_translate.sh
   sudo apt install parallel tor
+  ./translate_sentences.sh
 
 # References
   https://opensource.com/article/18/5/gnu-parallel

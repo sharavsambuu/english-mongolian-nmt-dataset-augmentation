@@ -14,7 +14,6 @@ function join_by { local IFS="$1"; shift; echo "$*"; }
 i=1
 cat mn_en_sentences.txt | 
   while read LINE; do 
-    echo "line number $i"
     arr1=($(echo $LINE | awk '{split($0,array,"+++++SEP+++++")} END{print array[1]}'))
     arr2=($(echo $LINE | awk '{split($0,array,"+++++SEP+++++")} END{print array[2]}'))
     arr2=("${arr2[@]:1}")
@@ -22,6 +21,7 @@ cat mn_en_sentences.txt |
     eng_sent=$( IFS=$' '; echo "${arr2[*]}" ) # english sentence
     if [ -z "$eng_sent" ]
     then
+      echo "processing at line number $i"
       while true; do
         eng_result=$(torify trans -brief "$mon_sent")
         if [ -z "$eng_result" ]
@@ -31,10 +31,13 @@ cat mn_en_sentences.txt |
         else
           translated_pair="$mon_sent +++++SEP+++++ $eng_result"
           sed -i "${i}s/.*/$translated_pair/" mn_en_sentences.txt
+          echo "translation result at line $i :"
           echo $translated_pair
           break
         fi
       done
+    else
+      echo "sentence at line number $i is already translated, so skipped"
     fi
     ((i++))
   done
