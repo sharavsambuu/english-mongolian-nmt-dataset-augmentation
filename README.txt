@@ -16,5 +16,6 @@
 
 # References
   https://opensource.com/article/18/5/gnu-parallel
+  https://askubuntu.com/questions/147241/execute-sudo-without-password
 
   
