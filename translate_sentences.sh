@@ -26,8 +26,8 @@ cat $1 |
         eng_result=$(torify trans -brief "$mon_sent")
         if [ -z "$eng_result" ]
         then
-          # try another node
-          sudo service tor restart
+          # try another node, the default restarting limit is to allow 5 restarts in a 10sec period.
+          sleep 3; sudo service tor restart
         else
           translated_pair="$mon_sent +++++SEP+++++ $eng_result"
           sed -i "${i}s/.*/$translated_pair/" $1
