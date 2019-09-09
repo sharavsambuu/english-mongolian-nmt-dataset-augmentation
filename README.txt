@@ -8,7 +8,7 @@
 
 # Steps
 
-  sudo apt install parallel tor
+  sudo apt install parallel tor build-essential
   ./install_translate.sh
   python3 datasets/dl_and_preprop_mn_news.py
   ./generate_sentences.sh && ./criterion_sentences.sh && ./prepare_translation.sh && ./split_sentences.sh
