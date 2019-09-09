@@ -12,7 +12,7 @@
 function join_by { local IFS="$1"; shift; echo "$*"; }
 
 i=1
-cat mn_en_sentences.txt | 
+cat $1 | 
   while read LINE; do 
     arr1=($(echo $LINE | awk '{split($0,array,"+++++SEP+++++")} END{print array[1]}'))
     arr2=($(echo $LINE | awk '{split($0,array,"+++++SEP+++++")} END{print array[2]}'))
@@ -30,7 +30,7 @@ cat mn_en_sentences.txt |
           sudo service tor restart
         else
           translated_pair="$mon_sent +++++SEP+++++ $eng_result"
-          sed -i "${i}s/.*/$translated_pair/" mn_en_sentences.txt
+          sed -i "${i}s/.*/$translated_pair/" $1
           echo "translation result at line $i :"
           echo $translated_pair
           break
