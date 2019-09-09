@@ -18,7 +18,7 @@ cat $1 |
     arr2=($(echo $LINE | awk '{split($0,array,"+++++SEP+++++")} END{print array[2]}'))
     arr2=("${arr2[@]:1}")
     mon_sent=$( IFS=$' '; echo "${arr1[*]}" ) # mongolian sentence
-    mon_sent=$(echo $mon_sent | sed 's/\/\\//g')
+    mon_sent=$(echo $mon_sent | sed 's/^\///;s/\// /g')
     eng_sent=$( IFS=$' '; echo "${arr2[*]}" ) # english sentence
     if [ -z "$eng_sent" ]
     then
