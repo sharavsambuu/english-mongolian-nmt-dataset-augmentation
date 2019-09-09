@@ -133,3 +133,5 @@ translate-shell/
 mn_en_sentences.txt
 sed*
 sentences_parts/
+
+nohup.out*
