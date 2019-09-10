@@ -34,7 +34,7 @@ cat $1 |
           sed -i "${i}s/.*/$translated_pair/" $1
           echo "translation result at line $i :"
           echo $translated_pair
-          sleep 2
+          #sleep 2
           break
         fi
       done
