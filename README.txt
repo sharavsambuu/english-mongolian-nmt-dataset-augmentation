@@ -16,7 +16,13 @@
   ./runtask.sh
 
 # References
+
   https://opensource.com/article/18/5/gnu-parallel
   https://askubuntu.com/questions/147241/execute-sudo-without-password
 
+  
+# Released datasets
+
+  [2019/09/10] Unvalidated 5 thousand sentence pairs of english to mongolian.
+  https://gist.github.com/sharavsambuu/be9001ddcb954565606466a3556bbf27
   
