@@ -137,3 +137,4 @@ sentences_parts/
 nohup.out*
 
 sampled_200k_sentences.txt
+sampled_million_sentences.txt
