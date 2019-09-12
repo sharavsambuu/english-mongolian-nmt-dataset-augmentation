@@ -8,7 +8,7 @@
 
 # Steps
 
-  sudo apt install parallel tor build-essential rar virtualenv
+  sudo apt install parallel tor build-essential rar virtualenv bsdmainutils
   virtualenv -p python3 env && source env/bin/activate && pip install -r requirements.txt
   ./install_translate.sh
   python3 datasets/dl_and_preprop_mn_news.py
