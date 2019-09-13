@@ -23,6 +23,8 @@
   
 # Released datasets
 
-  [2019/09/10] Unvalidated 5 thousand sentence pairs of english to mongolian.
+  [2019/09/10] 5K unvalidated sentences of pairs for english to mongolian.
   https://gist.github.com/sharavsambuu/be9001ddcb954565606466a3556bbf27
+  [2019/09/13] 94K unvalidated sentences of pairs for english to mongolian.
+  https://drive.google.com/file/d/1GNo1XJxRFxjey5VDsHjLvj9upXJOqd3e/view?usp=sharing
   
