@@ -44,6 +44,6 @@
   
 # Neural machine translation colab experiment, based on official tensorflow transformer tutorial
 
-[![Inference pretrained version](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xnwQLlh_5C1UOYUVEuu7D9_IUORn0YRK)
+Pretrained version for fast inference [![Inference pretrained version](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xnwQLlh_5C1UOYUVEuu7D9_IUORn0YRK)
 
-[![Train In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Qkzo624DrXjaEumK54sjf2KQX_zBsiLq)
+Train on Colab [![Train In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Qkzo624DrXjaEumK54sjf2KQX_zBsiLq)
