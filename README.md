@@ -37,7 +37,7 @@
   
   https://drive.google.com/file/d/1GNo1XJxRFxjey5VDsHjLvj9upXJOqd3e/view?usp=sharing
   
-  [2017/10/10] 1M mongolian-to-english sentence pairs.
+  [2019/10/10] 1 million mongolian to english sentence pairs.
   
   https://drive.google.com/file/d/14AtTVgibirSdHYTBFM9G1XPS7DvM5SdE/view?usp=sharing
   
