@@ -1,6 +1,6 @@
 certifi==2019.6.16
 chardet==3.0.4
-idna==2.8
+idna==3.7
 joblib==0.13.2
 nltk==3.4.5
 patool==1.12
