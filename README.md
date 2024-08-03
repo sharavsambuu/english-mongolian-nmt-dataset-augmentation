@@ -42,6 +42,8 @@
 
   https://huggingface.co/lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF
 
+  https://medium.com/@LakshmiNarayana_U/lm-studios-python-play-crafting-code-creatively-86c21d18d34a
+
   https://opensource.com/article/18/5/gnu-parallel
   
   https://askubuntu.com/questions/147241/execute-sudo-without-password

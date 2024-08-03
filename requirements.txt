@@ -9,3 +9,4 @@ six
 textblob
 tqdm
 urllib3
+jupyter
