@@ -58,6 +58,7 @@ translation_pair = [
 task_prompt = f"""
 Instruction:
 I will provide a Mongolian-to-English translation pair. Your task is to evaluate the quality of the translation on a scale from 0 to 1 and suggest an improved English translation.
+Take a deep breath and improved translation shouldn't divert.
 
 Response:
 Please provide the response in JSON format only. Do not include any explanations, additional text, or comments. No additional translation pairs are needed.
@@ -65,7 +66,7 @@ Please provide the response in JSON format only. Do not include any explanations
 JSON format:
 {{
   "quality": 0.4,
-  "suggested_english_translation": "bla bla bla... etc"
+  "improved_english_translation": "bla bla bla... etc"
 }}
 
 Here is the translation:
@@ -93,7 +94,7 @@ print(f"English   : {translation_pair[1]}")
 
 print(f"### Evalution")
 print(f"quality score : {response_json['quality']}")
-print(f"suggested     : {response_json['suggested_english_translation']}")
+print(f"improved      : {response_json['improved_english_translation']}")
 
 
 
