@@ -141,3 +141,4 @@ sampled_million_sentences.txt
 sampled_million_uniq_sentences.txt
 
 1m_sentences_parts/
+temp/
