@@ -1,3 +1,19 @@
+
+
+# Tasks
+
+  Main goal is to improve existing translation pairs using Llama 3.1 and some prompts
+
+  1. Find a way to call LM Studio using Python
+  2. Prepare a prompt to detect badly translated pairs
+  3. Prepare a prompt to improve mongolian to english translation pair
+  4. Publish improved translations
+  5. Train on improved translation dataset on the Colab and Tensorflow 2`
+
+
+
+
+
 # Notes
 
   700 million word Mongolian news data set
@@ -20,7 +36,11 @@
   
   ./runtask.sh
 
-# References
+# References and links
+
+  https://lmstudio.ai/
+
+  https://huggingface.co/lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF
 
   https://opensource.com/article/18/5/gnu-parallel
   
