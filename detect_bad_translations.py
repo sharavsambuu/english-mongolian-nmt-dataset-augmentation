@@ -48,8 +48,9 @@ def evaluate_translation(mn_text, en_text):
 
     task_prompt = f"""
         Instruction:
-        I will provide a Mongolian-to-English translation pair. Your task is to evaluate the quality of the translation on a scale from 0 to 1 and suggest an improved English translation.
-        Take a deep breath and improved translation shouldn't divert.
+        I will provide a Mongolian-to-English translation pair. 
+        Your task is to evaluate the quality of the translation on a scale from 0 to 1, where 0 is not understandable and 1 is perfectly accurate. 
+        Also, provide a revised English translation that better conveys the meaning of the Mongolian text in natural, fluent English.
 
         Response:
         Please provide the response in JSON format only. Do not include any explanations, additional text, or comments. No additional translation pairs are needed.
