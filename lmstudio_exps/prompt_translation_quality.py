@@ -64,27 +64,43 @@ You are a world-class Mongolian to English translator, renowned for your unwaver
 1. **In-Depth Meaning Analysis:** Begin with a meticulous examination of the Mongolian source text to fully grasp its core meaning, intended message, nuances, and communicative purpose. Then, carefully read the provided English translation to understand its current rendition of the Mongolian text.
 2. **Contextual and Cultural Understanding (Meaning Preservation Lens):** Deeply consider the context of the text – its subject matter, intended audience, purpose, tone, and style. Identify any cultural references, idioms, or domain-specific terminology that are crucial for accurate and culturally appropriate meaning transfer. Always evaluate these elements in terms of how they impact the *precise meaning* of the text.
 3. **Initial Quality Assessment (Accuracy-Centric):** Objectively assess the provided English translation, with a laser focus on meaning accuracy and then fluency. Pinpoint specific weaknesses, categorized as follows:
+
     *   **Meaning Accuracy Errors:** Identify any instances where the English translation *distorts, misrepresents, or omits* any aspect of the original Mongolian meaning. This is the most critical category.
     *   **Clarity and Fluency Deficiencies:** Identify areas where the English phrasing is unclear, awkward, or difficult to understand, *without* changing the underlying meaning.
     *   **Assign a Quality Score (Accuracy-Centric Scale 0.0 - 1.0):** Assign a quality score from 0.0 (meaning significantly distorted or lost) to 1.0 (meaning perfectly preserved and clearly expressed). **Meaning accuracy should be the overwhelming factor in this score.** Fluency contributes, but only secondarily to meaning.
+4. **Generate Initial Translation:** Based on your assessment, create an initial English translation. This will be your `initial_answer`.
+5. **First Pass Refinement - Accuracy Rectification (Meaning Priority):** Your *primary* focus in the first refinement pass is to rectify any meaning inaccuracies in your `initial_answer`. Correct any mistranslations, ensure no part of the original message is lost or distorted, and confirm that the English translation is a faithful and precise representation of the Mongolian source in terms of content.
+6. **Clarity and Readability Enhancement:** *Once meaning accuracy is fully secured,* improve the clarity and readability of the translation. Restructure sentences, refine word choices, and adjust phrasing to make the text easier to understand, *but only make changes that do not introduce any alteration to the established, accurate meaning.*
+7. **Generate Final Translation:** After these refinements, create your final English translation. This is your `final_answer`.
+8. **Terminology and Register Confirmation (Meaning Consistency):** Verify the accuracy and appropriateness of terminology, especially for specialized or domain-specific terms. Ensure that the register (formality level) is consistent with the Mongolian text and appropriate for the intended audience, again, always checking that any adjustments maintain perfect meaning fidelity.
+9. **Backtranslation and Meaning Divergence Check:**
+    *   **Generate Backtranslation:** Now, perform a *backtranslation* of your `final_answer` back into Mongolian.
+    *   **Compare and Identify Meaning Divergences:** Compare this backtranslation to the *original Mongolian text*. Identify any points where your backtranslation differs in meaning from the original Mongolian. Focus on *meaning*, not just wording.
+    *   **Rectify Meaning Divergences (If Any) in Final Translation:** If you identify any meaning shifts, immediately adjust your `final_answer` to eliminate these divergences and ensure perfect alignment with the original Mongolian meaning. **Meaning accuracy is paramount.**
 
-4. **First Pass Refinement - Accuracy Rectification (Meaning Priority):** Your *primary* focus in the first refinement pass is to rectify any meaning inaccuracies. Correct any mistranslations, ensure no part of the original message is lost or distorted, and confirm that the English translation is a faithful and precise representation of the Mongolian source in terms of content.
-5. **Clarity and Readability Enhancement:** *Once meaning accuracy is fully secured,* improve the clarity and readability of the translation. Restructure sentences, refine word choices, and adjust phrasing to make the text easier to understand, *but only make changes that do not introduce any alteration to the established, accurate meaning.*
-6. **Terminology and Register Confirmation (Meaning Consistency):** Verify the accuracy and appropriateness of terminology, especially for specialized or domain-specific terms. Ensure that the register (formality level) is consistent with the Mongolian text and appropriate for the intended audience, again, always checking that any adjustments maintain perfect meaning fidelity.
-7. **Second Pass Refinement - Clarity, Precision, and Backtranslation Meaning Check:** This stage focuses on ensuring the translation is clear, precise, and aligns perfectly with the original meaning, verified through a backtranslation step.
-    *   **Clarity and Precision Enhancement:**
-        *   **Identify Areas for Improvement:** Review your *first refined translation*. Look for any phrases or word choices that, while accurate, could be made clearer or more precise.
-        *   **Refine for Maximum Clarity:** Rephrase or restructure to enhance clarity and precision, ensuring the translation is easily understood by the target audience.
-    *   **Backtranslation and Meaning Divergence Check:**
-        *   **Generate Backtranslation:** Now, perform a *backtranslation* of your current English translation back into Mongolian.
-        *   **Compare and Identify Meaning Divergences:** Compare this backtranslation to the *original Mongolian text*. Identify any points where your backtranslation differs in meaning from the original Mongolian. Focus on *meaning*, not just wording.
-        *   **Rectify Meaning Divergences (If Any) in English Translation:** If you identify any meaning shifts, immediately adjust your English translation to eliminate these divergences and ensure perfect alignment with the original Mongolian meaning. **Meaning accuracy is paramount.**
+**Reasoning Documentation:**
+
+You must document your entire process within the `<reasoning>` tag. This should include:
+
+1. **Overall Meaning and Context:** Explain your comprehensive understanding of the Mongolian text's core message, context, and purpose.
+2. **Initial Translation Evaluation & Accuracy-Centric Quality Score:** Critically assess the provided English translation, specifically identifying meaning accuracy errors and clarity/fluency issues. Assign a quality score from 0.0 to 1.0, justifying it based on meaning accuracy and clarity, with meaning accuracy being the dominant factor.
+3. **Key Meaning-Related Challenges:** Highlight the most significant translation challenges you encountered in maintaining perfect meaning fidelity for this specific text, including instances of unknown words and how you handled them.
+4. **Initial Translation Rationale:** Briefly explain the reasoning behind your `initial_answer`.
+5. **Initial Translation Text:** Provide initial translated text here
+6. **Translation Choices (First Refinement - Meaning Accuracy Focus):** Detail your key decisions and changes during the first refinement pass, explicitly focusing on how you rectified meaning inaccuracies in the `initial_answer` and ensured precise meaning transfer.
+7. **Clarity and Readability Enhancement Details:** Describe the clarity improvements you implemented between the `initial_answer` and `final_answer`, *while strictly maintaining the established accurate meaning* from the first refinement.
+8. **Terminology & Register Confirmation Notes (Meaning Integrity):** Document any terminology research or register considerations, explicitly stating how these choices reinforce meaning accuracy and cultural appropriateness.
+9. **Refined translation:** Provide your refined english translation text here.
+10. **Backtranslation:** Provide your backtranslation of the `final_answer` into Mongolian. You also print backtranslated text here.
+11. **Meaning Divergence Analysis:** Detail your comparison of the backtranslation and the original Mongolian text. Note any meaning divergences found and how they were addressed in the `final_answer`. If no divergences were found, explicitly state that.
+12. **If backtranslation doesn't match, suggest your best translation attempt here, also don't forget best translation attemp. If previous step doesn't found significant backtranslation divergence, you can leave this step empty.
+
 
 **CRITICAL WARNING: Output Format and Accuracy are Non-Negotiable**
 
 *   **Output Format:** You must **strictly** adhere to the output format specified below. Any deviation from this format, including extra text outside the designated tags or multiple instances of the same tag, will be considered an error. **There should be only ONE `<reasoning>` tag, ONE `<initial_answer>` tag, ONE `<final_answer>` tag, and ONE `<output>` tag in your entire response.**
 *   **Tag Closure:** **All opening tags (e.g., `<reasoning>`) must be properly closed with their corresponding closing tags (e.g., `</reasoning>`). Failure to close any tag will be considered a critical error.**
-*   **Meaning Accuracy:** **Do NOT make any changes in the second pass that could even slightly alter the original meaning of the Mongolian text *as verified by backtranslation*. Accuracy of meaning, confirmed by backtranslation, is non-negotiable.** The goal is clarity and precision *within the confines of perfect meaning preservation, rigorously checked by backtranslation.*
+*   **Meaning Accuracy:** **Do NOT make any changes during the refinement process that could even slightly alter the original meaning of the Mongolian text *as verified by backtranslation*. Accuracy of meaning, confirmed by backtranslation, is non-negotiable.** The goal is clarity and precision *within the confines of perfect meaning preservation, rigorously checked by backtranslation.*
 
 **Handling Unknown Words (Transliteration):**
 
@@ -143,7 +159,10 @@ For the Mongolian text and its initial English translation provided below, metic
 *   `<final_answer>`
 *   `<output>`
 
+** Don't forget to close tag in appopriate place.
+
 **Do not include *any* text outside of these tags. The content within each tag should be a single, continuous block of text or properly formatted JSON (in the case of the `<output>` tag).**
+**Prevent markdown characters text and json contents in the tags. Remember I will parse output by those tags and also json.
 
 **Example of Correct Output Format:**
 
@@ -151,7 +170,7 @@ For the Mongolian text and its initial English translation provided below, metic
 <reasoning>
 1. Overall Meaning and Context: ... (content for reasoning)
 2. Initial Translation Evaluation & Accuracy-Centric Quality Score: ... (content for evaluation)
-... (rest of the reasoning content)
+... (rest of the reasoning content, including backtranslation and validation)
 </reasoning>
 
 <initial_answer>
@@ -163,29 +182,27 @@ For the Mongolian text and its initial English translation provided below, metic
 </final_answer>
 
 <output>
-**CRITICAL: Output ONLY valid JSON within the `<output>` tags. Do NOT include any text, comments, or markdown delimiters (like ```json, ```, ''', etc.) before, after, or around the JSON.  The content within `<output>` MUST be purely and exclusively JSON.**
+**CRITICAL: Output ONLY valid JSON within the `<output>` tags. Do NOT include any text, comments, or markdown delimiters (like ```json, ```, ''', etc.) before, after, or around the JSON. The content within `<output>` MUST be purely and exclusively JSON.**
 {{
   "quality_score": ...,
   "initial_english_translation": "...",
   "final_english_translation": "..."
 }}
 </output>
-```
+'''
 
 **Mongolian Text:** {translation_pair[0]}
 
 **English Translation:** {translation_pair[1]}
-
 """
 
 
 response = hello_lmstudio_call(system_promtp=system_prompt, user_prompt=task_prompt)
 
-response
+print(response)
 
 
 #%%
-print(response)
 
 
 #%%
@@ -240,6 +257,7 @@ print(f"improved      : {output_json['final_english_translation']}")
 
 
 #%%
+
 
 #%%
 
