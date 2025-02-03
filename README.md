@@ -1,4 +1,9 @@
 
+# License
+
+  This project is licensed under the MIT License. 
+  If you choose to use or modify this work, I’d really appreciate a nod of credit.
+
 
 # Tasks
 
