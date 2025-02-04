@@ -15,13 +15,15 @@ import re
 
 
 #%%
+#llm_name = "deepseek-r1-distill-llama-8b"
+llm_name = "Meta-Llama-3.1-8B-Instruct-GGUF"
 def hello_lmstudio_call(system_promtp="", user_prompt="'"):
     url = 'http://localhost:1234/v1/chat/completions'
     headers = {
         'Content-Type': "application/json"
     }
     data = {
-        "model": "lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF",
+        "model":"lmstudio-community/{llm_name}",
         'messages': [
             {'role': 'system', 'content': f"{system_promtp}"},
             {'role': 'user'  , 'content': f"{user_prompt}"}
